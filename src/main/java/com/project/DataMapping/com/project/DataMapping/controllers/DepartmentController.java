@@ -20,6 +20,11 @@ public class DepartmentController {
         this.departmentservice = departmentservice;
     }
 
+    @GetMapping
+    public String test(){
+        return "Test Successful";
+    }
+
     @GetMapping("/{departmentId}")
     public DepartmentEntity getdepartmentById(@PathVariable Long departmentId ){
         return departmentservice.getDepartmentById(departmentId);
